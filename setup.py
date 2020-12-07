@@ -35,6 +35,8 @@ setup(
         "setuptools",
         "pytest",
         "click",
+        "fastapi",
+        "uvicorn",
     ],
     entry_points="""
         [console_scripts]
