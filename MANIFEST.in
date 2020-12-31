@@ -1,0 +1,2 @@
+include quasar/.coveragerc
+recursive-include quasar/payload *.png
