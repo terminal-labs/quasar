@@ -40,6 +40,8 @@ pins = []
 
 reqs = [
     "setuptools",
+    "uvicorn",
+    "fastapi",
 ]
 
 extras = [
