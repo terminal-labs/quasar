@@ -1,9 +1,15 @@
+import os
+import pathlib
 import subprocess
 
-def uvicorn_service():
-    logfile = ""
-    app = ""
-    srcdir = ""
-    subprocess.call(["nohup uvicorn core:app &> nohup2.out &"], shell=True)
+def srcpgk_service_restapi():
+    port = "5000"
+    apppath = "core:app"
+    logfile = "nohup3.out"
 
-uvicorn_service()
+    shell = "bash"
+    srvapp = "uvicorn"
+    os.chdir(str(pathlib.Path(__file__).parent.absolute()))
+    subprocess.call([f"{shell} -c 'nohup {srvapp} --port {port} {apppath} &> {logfile} &'"], shell=True)
+
+srcpgk_service_restapi()
